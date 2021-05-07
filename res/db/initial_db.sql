@@ -15,6 +15,11 @@ CREATE TABLE `tbl_user_profile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+
+
+
+
 DROP TABLE IF EXISTS `tbl_user_access`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -26,6 +31,12 @@ CREATE TABLE `tbl_user_access` (
   PRIMARY KEY (`uacc_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+
+
+
+
 
 DROP TABLE IF EXISTS `tbl_user_account`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -47,6 +58,10 @@ CREATE TABLE `tbl_user_account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+
+
+
 DROP TABLE IF EXISTS `tbl_product_unit`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -60,6 +75,13 @@ CREATE TABLE `tbl_product_unit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+
+
+
+
+
+
 DROP TABLE IF EXISTS `tbl_product_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -71,6 +93,12 @@ CREATE TABLE `tbl_product_category` (
   PRIMARY KEY (`pcat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+
+
+
+
 
 DROP TABLE IF EXISTS `tbl_product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -94,6 +122,11 @@ CREATE TABLE `tbl_product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
+
+
+
+
+
 DROP TABLE IF EXISTS `tbl_transaction_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -107,13 +140,18 @@ CREATE TABLE `tbl_transaction_type` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
+
+
+
+
+
 DROP TABLE IF EXISTS `tbl_transaction`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_transaction` (
   `trans_id` int(100) NOT NULL AUTO_INCREMENT,
   `trans_timestamp` timestamp DEFAULT  CURRENT_TIMESTAMP,
-  `uprof_id` int(100) NOT NULL,
+  `trans_client` int(100) DEFAULT NULL,
   `trans_amount` double(32,4) DEFAULT '0.0000',
   `trans_tendered` double(32,4) DEFAULT '0.0000',
   `trans_change` double(32,4) DEFAULT '0.0000',
@@ -124,12 +162,14 @@ CREATE TABLE `tbl_transaction` (
   `trans_cancelled` smallint(1) DEFAULT '1',
   `uaccnt_id` int(100) DEFAULT NULL,
   PRIMARY KEY (`trans_id`),
-  KEY `fk_profiletransaction` (`uprof_id`),
   KEY `fk_usertransaction` (`uaccnt_id`),
-  CONSTRAINT `fk_profiletransaction` FOREIGN KEY (`uprof_id`) REFERENCES `tbl_user_profile` (`uprof_id`),
   CONSTRAINT `fk_usertransaction` FOREIGN KEY (`uaccnt_id`) REFERENCES `tbl_user_account` (`uaccnt_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+
+
 
 DROP TABLE IF EXISTS `tbl_transaction_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -150,6 +190,8 @@ CREATE TABLE `tbl_ptrans_detail` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
+
+
 DROP TABLE IF EXISTS `tbl_product_supplier`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -166,6 +208,9 @@ CREATE TABLE `tbl_product_supplier` (
   PRIMARY KEY (`psupp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+
 
 
 DROP TABLE IF EXISTS `tbl_prod_supp_relation`;
