@@ -3,7 +3,7 @@
 	include_once ("res/pages/header.php");
 
 	//isa lang tong variable na nag hold ng sql statement
-	$account_type_sql = "select * from tbl_user_access";
+	$account_type_sql = "select * from tbl_product_category";
 
 	//ipasa sql statement para ma execute ng phpmyadmin
 	$sql_result = $conn->query($account_type_sql);
@@ -23,8 +23,8 @@
 			while($account_record = $sql_result->fetch_assoc()) {
 		?>
 
-			<option value='<?php echo $account_record['uacc_id'];?>'>
-				<?php echo $account_record['uacc_name'];?>	
+			<option value='<?php echo $account_record['pcat_id'];?>'>
+				<?php echo $account_record['pcat_name'];?>	
 			</option>
 
 		<?php
