@@ -32,7 +32,7 @@
 
     </section>
     <!-- /.content -->
-    <div style="background: url(assets/BG.png);width: 100%;height: 600px;">
+    <div style="background: url no-repeat (assets/BG.png);width: 100%;height: 600px;">
     </div>
 
 
