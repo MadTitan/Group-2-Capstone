@@ -24,7 +24,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Footer
+          Foote
         </div>
         <!-- /.card-footer-->
       </div>
