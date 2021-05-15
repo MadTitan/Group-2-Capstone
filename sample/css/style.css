@@ -438,7 +438,7 @@ a.readmore_bt {
 .header {
      font-family: poppins;
      padding: 10px 0px;
-     background: url(../images/lodi.jpg);
+     background: url(../images/lodi.png);
      background-repeat: no-repeat;
 background-size: 100% 100%;
 background-position: center center;
@@ -1637,7 +1637,7 @@ display: inline-block;
 font-weight: 500;
 font-size: 17px;
 line-height: 30px;
-color: #f00;
+color: #0d3954;
 text-align: center;
 border-radius: 30px;
 }
@@ -1776,7 +1776,7 @@ display: block
 }
 
 .clients_red {
-     background: ##0d3954;
+     background: #0d3954;
      padding-top: 90px;
      padding-bottom:110px;
 } 
@@ -1838,7 +1838,7 @@ border-radius: 50px;
 /** brand **/
 .brand {
      padding-top: 60px;
-     border-top: #db0000 solid 6px;}
+     border-top: #0d3954 solid 6px;}
 
 .brand-bg {
      background: #ebebeb;
@@ -1928,7 +1928,7 @@ margin-top: 40px
 } 
 
 .form-control {
-     border: ##0d3954 solid 2px;
+     border: #0d3954 solid 2px;
      border-radius: inherit;
      margin-bottom: 30px;
      padding: 13px 20px;
@@ -1936,12 +1936,12 @@ margin-top: 40px
 }
 .form-control:focus {
      box-shadow: inherit;
-     border: #ff0000 solid 2px !important;
+     border: #0d3954 solid 2px !important;
 }
 
 .textarea {
      font-family: poppins;
-     border: ##0d3954 solid 2px;
+     border: #0d3954 solid 2px;
      margin-bottom: 30px;
      padding: 13px 20px;
      width: 100%;
@@ -1961,7 +1961,7 @@ margin-top: 40px
 }
 
 .send:hover {
-     background: #ff0000;
+     background: #0d3954;
 }
 
 
