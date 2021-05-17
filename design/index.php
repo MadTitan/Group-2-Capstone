@@ -1,3 +1,14 @@
+<?php 
+session_start();
+ if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_access'])){
+           header('Location:../login.php');
+}else{
+    if($_SESSION['user_access'] != 2){
+           header('Location:../login.php');
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,10 +79,14 @@
                                         <li><a href="brand.html">Products</a></li>
                                         <li><a href="special.html">Specials</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
+                                        <?php
+                                                if(isset($_SESSION['user_access'])){
+                                        ?>
                                         <li><a href="../logout.php">Logout</a></li>
-                                        <li class="last">
-                                            <a href="#"><img src="images/search_icon.png" alt="icon" /></a>
-                                        </li>
+                                        <?php 
+                                            }
+                                        ?>
+                                       
                                     </ul>
                                 </nav>
                             </div>
