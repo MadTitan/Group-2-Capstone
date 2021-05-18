@@ -38,7 +38,7 @@ if(isset($_POST['login_btn'])){
 
 	}else{
 		echo "<script>alert('User does not exist')</script>";
-		//header('refresh:0;login.php');
+		header('refresh:0;login.php');
 	}
 
 }else{
