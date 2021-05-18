@@ -7,7 +7,7 @@ require_once "connection.php";
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Admin Page</title>
+<title>Login</title>
  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 <body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
 <style>
@@ -36,26 +36,27 @@ body {
 }
 
 .topnav a.active {
-  background-color: #bb4e53;
+  background-color: #9eccdc;
   color: white;
 }
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #333333;
+  color: white;
+ }
 </style>
 </head>
 <body>
 
 <div class="topnav">
   <a href="login.php">Home</a>
-  <a class="active" href="#regis.">Register</a>
+  <a class="active"href="register.php">Register</a>
 
 </div>
-</div>
+</div>  
 
-</body>
-</html>
-
- <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 <center>
-  <title>Admin Page</title>
    
 <form method="post" action="registration.php">
   <input type="text" name="fname" placeholder="First Name"><br>

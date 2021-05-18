@@ -76,77 +76,44 @@ include_once "header.php";
         </div>
         <div class="brand-bg">
             <div class="container">
+                 <form method="post">
                 <div class="row">
+                   
+                <?php 
+                    $prod_sql="select * from tbl_product where prod_deleted='0'";
+                    $prod_res = $con->query($prod_sql);
+                    //echo mysqli_error($con);
+                    if($prod_res->num_rows > 0){
+                        while($prod_rec = $prod_res->fetch_assoc()){
+                ?>
+
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                         <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="dark">----</strong></h3>
-                            <span>School Uniform (Male)</span>
+                            <img src="images/products_img/<?php echo $prod_rec['prod_img']; ?>" alt="<?php echo $prod_rec['prod_description'];  ?>" />
+                            <h3>₱<strong class="dark"><?php echo $prod_rec['prod_sprice'];  ?></strong></h3>
+                            <span><?php echo $prod_rec['prod_dname'];  ?></span>
                             <i><img src="images/star.png"/></i>
                             <i><img src="images/star.png"/></i>
                             <i><img src="images/star.png"/></i>
                             <i><img src="images/star.png"/></i>
                         </div>
+                        <button class="btn btn-success btn-block" value="<?php echo $prod_rec['prod_id']; ?>" name='prod[]'>Add to Cart</button>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="blue">----</strong></h3>
-                            <span>School Uniform (Female)</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="red">----</strong></h3>
-                            <span>P.E. Uniform</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="red">----</strong></h3>
-                            <span>Activity Shirt</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="red">----</strong></h3>
-                            <span>Gym Bag</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="images/" alt="img" />
-                            <h3>₱<strong class="red">----</strong></h3>
-                            <span>SPCC Lanyard</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
+                  
+                <?php 
+                        }
+                    }else{
+
+                ?>
+             
+                <h1 class="text-muted ">No Available Product..</h1>
+             
+                <?php 
+                    }
+                ?>
+
                 </div>
+                </form>
             </div>
         </div>
     </div>
