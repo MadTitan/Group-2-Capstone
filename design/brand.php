@@ -130,6 +130,7 @@ if($fnd == false){
                             <i><img src="images/star.png"/></i>
                             <i><img src="images/star.png"/></i>
                             <i><img src="images/star.png"/></i>
+                            <i><img src="images/star.png"/></i>
                         </div>
                         <button class="btn btn-success btn-block" value="<?php echo $prod_rec['prod_id']; ?>" name='prod[]'>Add to Cart</button>
                     </div>
