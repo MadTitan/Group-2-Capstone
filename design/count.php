@@ -41,7 +41,7 @@ body {
 <h4 class="card-title text-center text-dark" ><?php echo $_SESSION['sp']['prod_dname']; ?><a href="brand.php" class="close">&times;</a></h4>
 <div class ="card-body">
 
-<input type="number" name="cnt" class="form-control" placeholder="Input total count"  value='1' required min= "1" max="99" step="1"> 
+<input type="number" name="cnt" class="form-control" placeholder="Input total count"  value='1' required min="1" max="99" step="1">
 
 </div>
 <div class="card-footer">
