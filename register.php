@@ -2,12 +2,16 @@
 session_start(); 
 require_once "connection.php";
 ?>
-<br><br>
+
+ <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 <center>
+  <title>Admin Page</title>
+   
 <form method="post" action="registration.php">
   <input type="text" name="fname" placeholder="First Name"><br>
   <input type="text" name="mname" placeholder="Middle Name"><br>
   <input type="text" name="lname" placeholder="Last Name"><br>
+  <body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
   <select name='gender'>
     <option value='Male'>Male</option>
     <option value='Female'>Female</option>

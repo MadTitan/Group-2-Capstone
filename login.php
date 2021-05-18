@@ -10,27 +10,10 @@ if(isset($_SESSION['user_id']) || isset($_SESSION['user_access'])){
 }
 
 ?>
-<style type="text/css">
-  #main{
-    background-color: #333;
-    width: 600px;
-    height: 300px;
-    border-radius: 30px;
 
-  }
-  h1{
-    color:white ;
-    background-color: blue;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    size: 300px; 
-    background-image: url('design/download.png');
-
-  }
-</style>
- <title>SPCC Inventory and Reservation</title>
+ <title>Admin Page</title>
  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-<body style="background-image: url('assets/BG.png');background-repeat:no-repeat;background-position:center;background-size:;">
+<body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
 <center>
 <form method="post" action="createsession.php" style="margin-top:10vh;">
   <input type="email"  name="u_email" placeholder="Email" maxlength="42" style="text-align:center;"  required=""><br>
