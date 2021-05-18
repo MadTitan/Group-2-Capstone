@@ -1,15 +1,3 @@
-<?php
-session_start(); 
-
-if(isset($_SESSION['user_id']) || isset($_SESSION['user_access'])){
-  if($_SESSION['user_access'] == 1){
-    header('Location:admin/index.php');
-  }else{
-    header('Location:design/index.php');
-  }
-}
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +39,7 @@ body {
 <body>
 
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="login.php">Home</a>
   <a href="register.php">Register</a>
 
 </div>
@@ -59,14 +47,4 @@ body {
 
 </body>
 </html>
-<center>
-<form method="post" action="createsession.php" style="margin-top:10vh;">
-  <input type="email"  name="u_email" placeholder="Email" maxlength="42" style="text-align:center;"  required=""><br>
-  <input type="password" name="u_pass" placeholder="Password" maxlength="18" style="text-align:center;" required=""><br>
-  
-  <button name="login_btn">Login</button><br>
-  
-  <a href="register.php" style="color:black;">Register an Account</a> | <a href="index.php" style="color:black;">Home</a>
-</form>
-</center>
-</body>
+
