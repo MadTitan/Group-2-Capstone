@@ -38,7 +38,7 @@ if(isset($_SESSION['user_id']) || isset($_SESSION['user_access'])){
   
   <button name="login_btn">Login</button><br>
   
-  <a href="register.php" style="color:black;">Register an Account</a>
+  <a href="register.php" style="color:black;">Register an Account</a> | <a href="index.php" style="color:black;">Home</a>
 </form>
 </center>
 </body>

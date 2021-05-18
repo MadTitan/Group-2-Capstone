@@ -8,7 +8,9 @@ if(isset($_GET['id'])){
 		$con->query($updt_sql);
 		header('Location:admin/index.php');
 
+}else{
+	session_destroy();
 }
-session_destroy();
+
 header('Location:login.php');
 ?>
