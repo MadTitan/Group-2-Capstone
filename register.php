@@ -2,43 +2,15 @@
 session_start(); 
 require_once "connection.php";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Login</title>
+<title>Register</title>
  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-<body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
+<link rel="stylesheet" href="design/css/bootstrap.min.css">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #9eccdc;
-  color: white;
-}
 footer {
   text-align: center;
   padding: 3px;
@@ -47,30 +19,32 @@ footer {
  }
 </style>
 </head>
-<body>
-
-<div class="topnav">
-  <a href="login.php">Home</a>
-  <a class="active"href="register.php">Register</a>
-
-</div>
-</div>  
-
-<center>
-   
-<form method="post" action="registration.php">
-  <input type="text" name="fname" placeholder="First Name"><br>
-  <input type="text" name="mname" placeholder="Middle Name"><br>
-  <input type="text" name="lname" placeholder="Last Name"><br>
-  <body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
-  <select name='gender'>
+ <body style="background-image: url('design/images/spcc1.jpg');background-repeat:no-repeat;background-position:center;background-size:;">
+<div class="container col-8 offset-2 col-md-4 offset-md-4 mt-5">
+  <div class="card ">
+    <div class="card-header text-center text-info h4">Account Registration</div>
+    <div class="card-body">
+      <form method="post" action="registration.php">
+  <input type="text" name="fname" placeholder="First Name" class="form-control mb-2">
+  <input type="text" name="mname" placeholder="Middle Name" class="form-control mb-2">
+  <input type="text" name="lname" placeholder="Last Name" class="form-control mb-2">
+  <select name='gender' class="form-control mb-2">
     <option value='Male'>Male</option>
     <option value='Female'>Female</option>
-  </select><br>
-  <input type="email" name="u_email" placeholder="Email"><br>
-  <input type="text" name="u_pass" placeholder="Password"><br>
-  <input type="text" name="cu_pass" placeholder="Confirm password"><br>
-  <button name="register_btn">Submit</button><br><br>
-  <a href="login.php" style="color:black;">Already have an Account?</a>
+  </select>
+  <input type="email" name="u_email" placeholder="Email" class="form-control mb-2">
+  <input type="text" name="u_pass" placeholder="Password" class="form-control mb-2">
+  <input type="text" name="cu_pass" placeholder="Confirm password" class="form-control mb-2">
+  <button name="register_btn" class="btn btn-primary btn-block">Register</button>
 </form>
-</center>
+
+
+    </div>
+     <div class="card-footer text-center">
+      <a href="login.php">Login</a> | <a href="index.php" >Home</a>
+    </div>
+  </div>
+</div>
+
+   
+
