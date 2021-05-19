@@ -14,9 +14,9 @@ include_once "header.php";
                             <span>System Plus Computer College</span>
                             <p>A leading and globally competitive institution of learning through service and innovation.
                                 <br> Systems Plus Computer College is committed to provide liberal, quality, transformative, and relevant education towards the holistic development of all stakeholders through excellence in instruction, research and extension services.</p>
-                            <a class="buynow" href="#">Buy Now</a>
+                            <a class="buynow" href="brand.php">Buy Now</a>
                             <ul class="social_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li> <a href="https://www.facebook.com/SPCCCaloocanOfficial"><i class="fa fa-facebook-f"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>

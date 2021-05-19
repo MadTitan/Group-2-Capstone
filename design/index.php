@@ -27,8 +27,11 @@ include_once "header.php";
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="second-slide" src="images/2nd.jpg" alt="Second slide">
-                  
+                    <center>
+                    <video width="1920" height="765" autoplay controls>
+                        <source src="images/My Video4_Trim.mp4" type="video/mp4">
+                        </video> 
+                    </center>
                 </div>
             
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -56,7 +59,6 @@ include_once "header.php";
                         <p>Systems Plus College Foundation was organized in Balibago, Angeles City on June 27, 1985. Its primary purpose was to conduct seminars for those who were planning to enter the electronic data processing field as programmer encoders or system analysts.Systems Plus started tutorial programs for student and professionals on July 7, 1985 (The School's Foundation Day) with just 10 enrollees. By the following year, the number of enrollees jumped to 86. </p>
 
                     </div>
-               
             </div>
         </div>
     </div>

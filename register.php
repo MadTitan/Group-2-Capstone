@@ -41,7 +41,7 @@ footer {
 
     </div>
      <div class="card-footer text-center">
-      <a href="login.php">Login</a> | <a href="index.php" >Home</a>
+      <a href="login.php">Login</a> | <a href="index.php" >Home</a> | <a href="https://spcc.edu.ph/"> Spcc Page </a>
     </div>
   </div>
 </div>
