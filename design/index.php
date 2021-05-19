@@ -26,12 +26,9 @@ include_once "header.php";
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <center>
-                    <video width="1920" height="765" autoplay controls>
-                        <source src="images/My Video4_Trim.mp4" type="video/mp4">
-                        </video> 
-                    </center>
+                 <div class="carousel-item">
+                    <img class="second-slide" src="images/2nd.jpg" alt="Second slide">
+                  
                 </div>
             
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
