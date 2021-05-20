@@ -1,5 +1,6 @@
 <?php
-$connection = msqli_connect("localhost","root","","adminpanel");
+session_start();
+$con = new mysqli('localhost','root','','group2capstone');
 
 if (isset($_POST['registerbtn']))
 {
@@ -13,7 +14,9 @@ if (isset($_POST['registerbtn']))
     $query = "INSERT INTO register (username,email,password) VALUES ('$username','$email','password')";
 	$query_run = mysqli_query($connection, $query);
 
-	if($query_run)
+	if (condition) {
+		# code...
+	}($query_run)
 	{
         //echo "Saved";
         $_SESSION ['success'] = "Admin Profile Added";
