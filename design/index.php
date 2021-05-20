@@ -55,6 +55,8 @@ include_once "header.php";
                         <span>June 1985</span>
                         <p>Systems Plus College Foundation was organized in Balibago, Angeles City on June 27, 1985. Its primary purpose was to conduct seminars for those who were planning to enter the electronic data processing field as programmer encoders or system analysts.Systems Plus started tutorial programs for student and professionals on July 7, 1985 (The School's Foundation Day) with just 10 enrollees. By the following year, the number of enrollees jumped to 86. </p>
 
+                        
+
                     </div>
             </div>
         </div>
